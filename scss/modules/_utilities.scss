@@ -1,0 +1,94 @@
+/* Container
+======================================= */
+.theme-container {
+    max-width: 1200px;
+    padding-left: 25px;
+    padding-right: 25px;
+    box-sizing: content-box;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.theme-container.theme-container-fullwidth {
+    max-width: none;
+}
+
+
+/* Theme panel
+======================================= */
+.theme-panel {
+    position: relative;
+}
+
+
+/* Theme flexbox classes
+======================================= */
+.theme-flex {
+    display: flex;
+}
+
+.theme-flex-column {
+    flex-direction: column;
+}
+
+.theme-flex-middle {
+    align-items: center;
+}
+
+.theme-flex-center {
+    justify-content: center;
+}
+
+.theme-flex-between {
+    justify-content: space-between;
+}
+
+/* Visibility
+======================================= */
+.theme-small-hidden {
+    @include theme-small-to-bigger{
+        display: none;
+    };
+}
+
+.theme-small-show {
+    display: none;
+    @include theme-small-to-bigger{
+        display: block;
+    };
+}
+
+.theme-medium-hidden {
+    @include theme-medium-to-bigger{
+        display: none;
+    };
+}
+
+.theme-medium-show {
+    display: none;
+    @include theme-medium-to-bigger{
+        display: block;
+    };
+}
+
+/* Theme buttons
+======================================= */
+.theme-button {
+    background: $global-blue-color;
+    color: $global-white-color;
+    text-transform: uppercase;
+    font-size: 1.38rem;
+    border-radius: 5px;
+    display: inline-block;
+    padding: 20px 50px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all .3s ease-in-out;
+    letter-spacing: 5px;
+    cursor: pointer;
+
+    &:hover {
+        background: darken($global-blue-color, 10%);
+    }
+
+}

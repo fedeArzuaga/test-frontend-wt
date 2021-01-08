@@ -1,0 +1,26 @@
+
+/* Visibility
+======================================= */
+@mixin theme-xsmall-to-bigger {
+    @media screen and (min-width: $breakpoint-xsmall) {
+        @content;
+    }
+}
+
+@mixin theme-small-to-bigger {
+    @media screen and (min-width: $breakpoint-small) {
+        @content;
+    }
+}
+
+@mixin theme-medium-to-bigger {
+    @media screen and (min-width: $breakpoint-medium) {
+        @content;
+    }
+}
+
+@mixin theme-large-to-bigger {
+    @media screen and (min-width: $breakpoint-large) {
+        @content;
+    }
+}
